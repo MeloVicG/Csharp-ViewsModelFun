@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    @using ViewModelFun.Models
+    @model ViewModel[]
+</head>
+
+<body>
+    <h4>Here are some numbers!</h4>
+
+    <h1>List here
+        @Model[0]
+        @foreach(ViewModel user in Model)
+        {
+            <li>@user.FirstName @user.LastName</li>
+        }
+
+    </h1>
+
+</body>
+</html>
